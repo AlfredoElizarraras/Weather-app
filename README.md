@@ -2,7 +2,7 @@
  :sunny: Weather app :partly_sunny:
 </h1>
 
-> This app fetch weather info from an api page. It's purpose is to showcase what I have learned about async and apis code in the Microverse course curriculum.
+> This app fetches weather info from an api page. It's purpose is to showcase what I have learned about async and apis code in the Microverse course curriculum.
 
 
 ## Built With
