@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+
+.app-bar-top {
+  display: flex;
+  height: 4rem;
+  padding-left: 0.985rem;
+  padding-right: 0.985rem;
+  background-color: $primary-dark;
+  justify-content: space-between;
+  align-items: center;
+  color: $on-primary-dark-color;
+}
+
+.app-bar-top__title {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.app-bar-top__button {
+  border: none;
+  background-color: $primary-dark; 
+  height: 100%;
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.d-none {
+  display: none;
+}
