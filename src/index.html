@@ -7,8 +7,8 @@
   </head>
   <body>
     <header class="app-bar-top app-bar-top--shadow">
-      <h1 class="app-bar-top__title d-none">Weather app</h1>
-      <button id="appBarTopSearchButton" class="app-bar-top__button d-none">
+      <h1 id="appBarTopTitle" class="app-bar-top__title">Weather app</h1>
+      <button id="appBarTopSearchButton" class="app-bar-top__button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -24,13 +24,13 @@
       </button>
       <input
         id="appBarTopSearchInput"
-        class="app-bar-top__input"
+        class="app-bar-top__input d-none"
         placeholder="Search"
         maxlength="100"
       />
       <button
         id="appBarTopCloseSearch"
-        class="app-bar-top__button app-bar-top__button--close"
+        class="app-bar-top__button app-bar-top__button--close d-none"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,4 @@
-import './index.scss';
-import * as appBarTop from './app-bar-top/app-bar-topComponent';
+import "./index.scss";
+import { AppBarTopComponent } from "./app-bar-top/app-bar-topComponent";
 
-const appbartop = appBarTop();
+AppBarTopComponent.render();

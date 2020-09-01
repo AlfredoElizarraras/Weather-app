@@ -1,9 +1,10 @@
-const searchButton = document.querySelector('#appBarTopSearchButton');
+import * as dom from "../dom/dom";
 
-const showElement = (element) => {
-  element.classList.remove('d-none');
-};
-
-const hideElement = (element) => {
-  element.classList.remove('d-none');
+export const addClickEvent = () => {
+  dom.searchButton.addEventListener("click", () => {
+    dom.hideElement(dom.searchButton);
+    dom.hideElement(dom.appBarTitle);
+    dom.showElement(dom.searchInput);
+    dom.showElement(dom.closeButton);
+  });
 };

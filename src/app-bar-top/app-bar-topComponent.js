@@ -1,9 +1,13 @@
 import './styles/app-bar-top.scss';
+import { addClickEvent } from './events/searchButton';
 
-const AppBarTopComponent = (() => {
+export const AppBarTopComponent = (() => {
+  const render = () => {
+    addClickEvent();
+  };
+
   return {
-    
+    render
   };
 })();
 
-export default AppBarTopComponent;
