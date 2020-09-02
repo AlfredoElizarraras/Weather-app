@@ -10,7 +10,7 @@ export const searchButtonClick = (func) => {
 
 export const searchInputEnterKeyDown = (func) => {
   searchInput.addEventListener('keydown', (e) => {
-    if (e.code === 'Enter'){
+    if (e.key === 'Enter'){
       func();
     }
   })

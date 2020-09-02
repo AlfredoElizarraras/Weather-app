@@ -1,8 +1,9 @@
-import './styles/app-bar-top.scss';
-import { 
+import "./styles/app-bar-top.scss";
+import {
   searchButtonClick,
-  closeButtonClick
- } from './events/events';
+  closeButtonClick,
+  searchInputEnterKeyDown,
+} from "./events/events";
 import * as dom from "./dom/dom";
 
 export const AppBarTopComponent = (() => {
@@ -23,13 +24,19 @@ export const AppBarTopComponent = (() => {
     dom.searchInput.focus();
   };
 
+  const getSearchValueEvent = (func) => {
+    searchInputEnterKeyDown(() => {
+      func(dom.searchInput.value);
+    });
+  };
+
   const render = () => {
     searchButtonClick(showSearch);
     closeButtonClick(hideSearch);
   };
 
   return {
-    render
+    render,
+    getSearchValueEvent
   };
 })();
-
