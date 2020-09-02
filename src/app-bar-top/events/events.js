@@ -5,7 +5,6 @@ export const closeButtonClick = (func) => {
 };
 
 export const searchButtonClick = (func) => {
-  console.log(searchButton());
   searchButton().addEventListener("click", func);
 };
 
