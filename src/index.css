@@ -14,3 +14,15 @@ body {
 header {
   height: 10vh !important;
 }
+
+#loadBar {
+  display: none;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+}
+
+#loadBar > img {
+  height: 100px;
+  width: 100px;
+}

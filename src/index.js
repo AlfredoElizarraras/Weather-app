@@ -2,6 +2,7 @@ import './index.css';
 import AppBarTopComponent from './app-bar-top/app-bar-topComponent';
 import CardComponent from './card/cardComponent';
 import Weather from './Models/weather';
+import * as loadBar from './loadBar/loadBar';
 
 const body = document.getElementsByTagName('body')[0];
 AppBarTopComponent.render(body);
@@ -12,8 +13,10 @@ window.onload = () => {
   AppBarTopComponent.getSearchValueEvent((value) => {
     value = value.trim();
     if (value === '') return;
+    loadBar.showBar();
 
     Weather().findByCityName(value).then((newCard) => {
+      loadBar.hideBar();
       if (!newCard.error) CardComponent.showCard(newCard);
       else alert(newCard.error.message);
     });
