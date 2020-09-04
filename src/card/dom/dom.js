@@ -9,7 +9,7 @@ const createCardMarkUp = (cardInfo) => {
 };
 
 export const cardsRow = () => document.getElementById("cardsRow");
-export const getCard = (id) => document.getElementById(id);
+export const getCard = (card) => document.getElementById(card.id);
 
 export const createCard = (cardInfo) => {
   const card = document.createElement("article");
@@ -21,7 +21,7 @@ export const createCard = (cardInfo) => {
 };
 
 export const editCard = (cardInfo) =>
-  (getCard(cardInfo.id).innerHTML = createCardMarkUp(cardInfo));
+  getCard(cardInfo.id).innerHTML = createCardMarkUp(cardInfo);
 
 export const displayCard = (card) => {
   cardsRow().appendChild(card);
