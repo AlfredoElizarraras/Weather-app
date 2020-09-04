@@ -1,14 +1,13 @@
-import "./styles/app-bar-top.scss";
+import './styles/app-bar-top.scss';
 import {
   searchButtonClick,
   closeButtonClick,
   searchInputEnterKeyDown,
-} from "./events/events";
-import * as dom from "./dom/dom";
+} from './events/events';
+import * as dom from './dom/dom';
 
-export const AppBarTopComponent = (() => {
-  const createMarkUp = () => {
-    return `
+const AppBarTopComponent = (() => {
+  const createMarkUp = () => `
     <header id="appBarTop" class="app-bar-top">
     <h1 id="appBarTopTitle" class="app-bar-top__title">Weather app</h1>
     <button id="appBarTopSearchButton" class="app-bar-top__button">
@@ -49,7 +48,6 @@ export const AppBarTopComponent = (() => {
     </button>
   </header>
     `;
-  };
 
   const hideSearch = () => {
     dom.showElement(dom.searchButton());
@@ -89,3 +87,5 @@ export const AppBarTopComponent = (() => {
     addEvents,
   };
 })();
+
+export default AppBarTopComponent;

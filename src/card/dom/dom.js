@@ -1,27 +1,26 @@
-const createCardMarkUp = (cardInfo) => {
-  return `
+const createCardMarkUp = (cardInfo) => `
   <h3 class="card__title">${cardInfo.title}</h3>
     <span class="card__weather-description">${cardInfo.description}</span>
     <div class="card__info">
       <h4 class="card__info__main-temperature">${cardInfo.temperature}</h4>
        <img src="http://openweathermap.org/img/wn/${cardInfo.icon}@2x.png" />
     </div>`;
-};
 
-export const cardsRow = () => document.getElementById("cardsRow");
+export const cardsRow = () => document.getElementById('cardsRow');
 export const getCard = (card) => document.getElementById(card.id);
 
 export const createCard = (cardInfo) => {
-  const card = document.createElement("article");
+  const card = document.createElement('article');
 
   card.id = cardInfo.id;
-  card.classList.add("card");
+  card.classList.add('card');
   card.innerHTML = createCardMarkUp(cardInfo);
   return card;
 };
 
-export const editCard = (cardInfo) =>
+export const editCard = (cardInfo) => {
   getCard(cardInfo.id).innerHTML = createCardMarkUp(cardInfo);
+};
 
 export const displayCard = (card) => {
   cardsRow().appendChild(card);

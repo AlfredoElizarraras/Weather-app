@@ -1,5 +1,6 @@
 import * as data from './data/weatherAPI';
-export const Weather = () => {
+
+const Weather = () => {
   const matchData = (weatherInfo) => {
     const returnValue = {
       id: null,
@@ -7,7 +8,7 @@ export const Weather = () => {
       description: null,
       temperature: null,
       icon: null,
-      error: null
+      error: null,
     };
 
     if (weatherInfo.cod === 200) {
@@ -16,13 +17,11 @@ export const Weather = () => {
       returnValue.description = weatherInfo.weather[0].description;
       returnValue.temperature = weatherInfo.main.temp;
       returnValue.icon = weatherInfo.weather[0].icon;
-    }
-    else {
-      returnValue.error = 
-      {
+    } else {
+      returnValue.error = {
         cod: weatherInfo.cod,
-        message: weatherInfo.message
-      }
+        message: weatherInfo.message,
+      };
     }
     return returnValue;
   };
@@ -38,3 +37,5 @@ export const Weather = () => {
     findByCityName,
   };
 };
+
+export default Weather;

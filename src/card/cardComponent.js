@@ -1,10 +1,10 @@
-import "./styles/card.scss";
-import * as dom from "./dom/dom";
+import './styles/card.scss';
+import * as dom from './dom/dom';
 
-export const CardComponent = (() => {
+const CardComponent = (() => {
   const addCard = (card) => {
     if (dom.getCard(card)) return dom.editCard(card);
-    else return dom.createCard(card);
+    return dom.createCard(card);
   };
 
   const showCard = (card) => {
@@ -22,3 +22,5 @@ export const CardComponent = (() => {
     showCard,
   };
 })();
+
+export default CardComponent;

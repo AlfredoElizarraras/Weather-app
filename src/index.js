@@ -1,7 +1,7 @@
-import './index.scss';
-import { AppBarTopComponent } from './app-bar-top/app-bar-topComponent';
-import { CardComponent } from './card/cardComponent';
-import { Weather } from './Models/weather';
+import './index.css';
+import AppBarTopComponent from './app-bar-top/app-bar-topComponent';
+import CardComponent from './card/cardComponent';
+import Weather from './Models/weather';
 
 const body = document.getElementsByTagName('body')[0];
 AppBarTopComponent.render(body);

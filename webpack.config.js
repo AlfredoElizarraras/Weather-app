@@ -44,13 +44,13 @@ module.exports = {
 
       // CSS LOADER + split plug
       {
-        test: /\.scss$/,
+        test: /\.[s]?css$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
-          }, 
+            loader: MiniCssExtractPlugin.loader,
+          },
           "css-loader",
-          "sass-loader"
+          "sass-loader",
         ],
       },
     ],
