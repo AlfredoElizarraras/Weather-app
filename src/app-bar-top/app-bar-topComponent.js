@@ -74,14 +74,18 @@ export const AppBarTopComponent = (() => {
     });
   };
 
-  const render = (parent) => {
-    parent.innerHTML += createMarkUp();
+  const addEvents = () => {
     searchButtonClick(showSearch);
     closeButtonClick(hideSearch);
   };
 
+  const render = (parent) => {
+    parent.innerHTML += createMarkUp();
+  };
+
   return {
     render,
-    getSearchValueEvent
+    getSearchValueEvent,
+    addEvents,
   };
 })();
