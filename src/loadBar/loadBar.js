@@ -1,7 +1,7 @@
 export const showBar = () => {
-  document.getElementById('loadBar').style.display = "block"
+  document.getElementById('loadBar').style.display = 'block';
 };
 
 export const hideBar = () => {
-  document.getElementById('loadBar').style.display = "none"
+  document.getElementById('loadBar').style.display = 'none';
 };

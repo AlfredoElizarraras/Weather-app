@@ -4,10 +4,143 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
+    <style>
+      
+      /* The error-modal (background) */
+      .error-modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        -webkit-animation-name: fadeIn; /* Fade in the background */
+        -webkit-animation-duration: 0.4s;
+        animation-name: fadeIn;
+        animation-duration: 0.4s
+      }
+      
+      /* error-modal Content */
+      .error-modal__content {
+        position: fixed;
+        bottom: 0;
+        background-color: #fefefe;
+        width: 100%;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s
+      }
+      
+      /* The error-close Button */
+      .error-close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .error-close:hover,
+      .error-close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      .error-modal__header {
+        padding: 2px 16px;
+        background-color: #B00020;
+        color: white;
+      }
+      
+      .error-modal__body {
+        padding: 2px 16px;
+        background-color: #B00020;
+        color: #ffffff;
+      }
+      
+      
+      /* Add Animation */
+      @-webkit-keyframes slideIn {
+        from {bottom: -300px; opacity: 0} 
+        to {bottom: 0; opacity: 1}
+      }
+      
+      @keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 0; opacity: 1}
+      }
+      
+      @-webkit-keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+      }
+      
+      @keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+      }
+      </style>
   </head>
   <body>
     <div id="loadBar">
-      <img src="https://icon-library.com/images/progress-icon-gif/progress-icon-gif-20.jpg" alt="">
+      <img
+        src="https://icon-library.com/images/progress-icon-gif/progress-icon-gif-20.jpg"
+        alt=""
+      />
     </div>
+
+    <h2>Bottom error-modal</h2>
+
+    <!-- Trigger/Open The error-modal -->
+    <button id="myBtn">Open error-modal</button>
+
+    <!-- The error-modal -->
+    <div id="errorModal" class="error-modal">
+      <!-- error-modal content -->
+      <div class="error-modal__content">
+        <div class="error-modal__header">
+          <span class="error-close">&times;</span>
+          <h2 id="errorModalTitle">Error</h2>
+        </div>
+        <div class="error-modal__body">
+          <p id="errorModalMessage">
+            Some text in the error-modal Body
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Get the error-modal
+      var errorModal = document.getElementById("errorModal");
+
+      // Get the button that opens the error-modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the error-modal
+      var span = document.getElementsByClassName("error-close")[0];
+
+      // When the user clicks the button, open the error-modal
+      btn.onclick = function () {
+        errorModal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), error-close the error-modal
+      span.onclick = function () {
+        errorModal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the error-modal, error-close it
+      window.onclick = function (event) {
+        if (event.target == errorModal) {
+          errorModal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
