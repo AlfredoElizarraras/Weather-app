@@ -41,6 +41,7 @@ const CardComponent = (() => {
   };
 
   const changeFarenheitToCelcius = () => {
+    if (dom.temperatureButtonIsActive(dom.celciusButton())) return;
     dom.activateTemperatureButton(dom.celciusButton());
     dom.desactivateTemperatureButton(dom.farenheitButton());
 
@@ -48,6 +49,7 @@ const CardComponent = (() => {
   };
 
   const changeCelciusToFarenheit = () => {
+    if (dom.temperatureButtonIsActive(dom.farenheitButton())) return;
     dom.activateTemperatureButton(dom.farenheitButton());
     dom.desactivateTemperatureButton(dom.celciusButton());
 
