@@ -13,6 +13,7 @@ ErrorModalComponent.render(body);
 window.onload = () => {
   AppBarTopComponent.addEvents();
   ErrorModalComponent.addEvents();
+  CardComponent.addEvents();
 
   AppBarTopComponent.getSearchValueEvent((value) => {
     value = value.trim();
