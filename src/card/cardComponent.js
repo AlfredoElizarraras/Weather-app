@@ -4,7 +4,7 @@ import * as dom from './dom/dom';
 import * as convertions from './helpers/temperatureConvertions';
 
 const CardComponent = (() => {
-  const addCard = (card) => {
+  const modifyCard = (card) => {
     if (dom.temperatureButtonIsActive(dom.celciusButton())) {
       const temperature = convertions.kelvinToCelcius(card.temperature);
       card.temperature = `${temperature}°C`;
@@ -12,12 +12,15 @@ const CardComponent = (() => {
       const temperature = convertions.kelvinToFarenheit(card.temperature);
       card.temperature = `${temperature}°F`;
     }
-    if (dom.getCard(card)) return dom.editCard(card);
-    return dom.createCard(card);
+    return card;
   };
 
   const showCard = (card) => {
-    dom.displayCard(addCard(card));
+    if (dom.getCard(card)) {
+      dom.editCard(modifyCard(card));
+    } else {
+      dom.appendCard(dom.createCard(modifyCard(card)));
+    }
   };
 
   const changeTemperatures = (toCelcius = true) => {
