@@ -1,0 +1,106 @@
+@import "../../styles/variables.scss";
+
+.error-modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+
+  .error-modal__content {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20vh;
+    background-color: $error-background-color;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+  }
+
+  .error-close {
+    color: $error-font-color;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .error-close:hover,
+  .error-close:focus {
+    color: $on-secondary-main-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .error-modal__header {
+    padding: 2px 16px;
+    background-color: $error-background-color;
+    color: $error-font-color;
+  }
+
+  .error-modal__body {
+    padding: 2px 16px;
+    background-color: $error-background-color;
+    color: $error-font-color;
+  }
+
+  #errorModalMessage {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  @-webkit-keyframes slideIn {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.d-none {
+  display: none;
+}
