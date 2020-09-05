@@ -8,12 +8,47 @@
 
 .cards-container {
   display: flex;
+  position: relative;
   background-color: $primary-main;
   width: 100%;
   height: 100%;
   border-radius: 10px;
   padding: 2rem;
   overflow-y: scroll;
+
+  .cards-container__temperature-buttons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+  }
+
+  .temperature-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $secondary-main;
+    margin-bottom: 20px;
+
+    &:hover {
+      background-color: $secondary-dark;
+    }
+
+    svg {
+      fill: $on-secondary-main-color;
+    }
+  }
+
+  .active {
+    svg {
+      fill: $on-primary-main-color;
+    }
+  }
 
   .cards-container__row {
     display: flex;
