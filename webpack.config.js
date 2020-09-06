@@ -1,15 +1,15 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  devtool: "none",
+  devtool: 'none',
 
-  entry: ["./src/index.js"],
+  entry: ['./src/index.js'],
   output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
   },
 
   module: {
@@ -19,7 +19,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: { cacheDirectory: true },
         },
       },
@@ -27,18 +27,18 @@ module.exports = {
       // HTML LOADER + plug
       {
         test: /\.html$/,
-        use: [{ loader: "html-loader" }],
+        use: [{ loader: 'html-loader' }],
       },
 
       // FILE LOADER - images
       {
         test: /\.(png|jpg)$/,
-        loader: "file-loader",
+        loader: 'file-loader',
         options: {
-          name: "img/[name].[ext]",
-          output: "img/",
+          name: 'img/[name].[ext]',
+          output: 'img/',
           // css url path after build
-          publicPath: "../",
+          publicPath: '../',
         },
       },
 
@@ -49,8 +49,8 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
           },
-          "css-loader",
-          "sass-loader",
+          'css-loader',
+          'sass-loader',
         ],
       },
     ],
@@ -58,12 +58,12 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: 'src/index.html',
     }),
 
     new MiniCssExtractPlugin({
       // css output path
-      filename: "css/[name].css",
+      filename: 'css/[name].css',
     }),
 
     new CssMinimizerPlugin(),
