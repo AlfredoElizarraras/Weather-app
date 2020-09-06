@@ -11,7 +11,7 @@
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  -webkit-animation-name: fadeIn;
+  -webkit-animation-name: fadein;
   -webkit-animation-duration: 0.4s;
   animation-name: fadeIn;
   animation-duration: 0.4s;
@@ -22,7 +22,7 @@
     width: 100%;
     height: 20vh;
     background-color: $error-background-color;
-    -webkit-animation-name: slideIn;
+    -webkit-animation-name: slidein;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
     animation-duration: 0.4s;
@@ -65,6 +65,7 @@
       bottom: -300px;
       opacity: 0;
     }
+
     to {
       bottom: 0;
       opacity: 1;
@@ -76,6 +77,7 @@
       bottom: -300px;
       opacity: 0;
     }
+
     to {
       bottom: 0;
       opacity: 1;
@@ -86,6 +88,7 @@
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
@@ -95,6 +98,7 @@
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
