@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -6,9 +7,9 @@ const path = require('path');
 module.exports = {
   devtool: 'none',
 
-  entry: './src/index.js',
+  entry: ['./src/index.js'],
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
 
@@ -27,9 +28,7 @@ module.exports = {
       // HTML LOADER + plug
       {
         test: /\.html$/,
-        use: [
-          { loader: 'html-loader' },
-        ],
+        use: [{ loader: 'html-loader' }],
       },
 
       // FILE LOADER - images
@@ -46,14 +45,14 @@ module.exports = {
 
       // CSS LOADER + split plug
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      },
-
-      // SASS LOADER
-      {
-        test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        test: /\.[s]?css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          'css-loader',
+          'sass-loader',
+        ],
       },
     ],
   },
@@ -71,3 +70,4 @@ module.exports = {
     new CssMinimizerPlugin(),
   ],
 };
+/* eslint-enable import/no-unresolved */

@@ -1,0 +1,60 @@
+@import "../../styles/variables.scss";
+
+.app-bar-top {
+  display: flex;
+  height: 4rem;
+  background-color: $primary-dark;
+  justify-content: space-between;
+  align-items: center;
+  color: $on-primary-dark-color;
+
+  .app-bar-top__title {
+    flex-grow: 1;
+    font-size: 1.5rem;
+    margin-left: 2.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .app-bar-top__button {
+    border: none;
+    background-color: $primary-dark;
+    height: 100%;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .app-bar-top__input {
+    border: none;
+    height: 100%;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    text-indent: 2.5rem;
+  }
+
+  .app-bar-top__button--close {
+    background-color: $surface;
+
+    svg {
+      transition: all 0.5s;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .d-none {
+    display: none;
+  }
+}
+
+.app-bar-top--shadow {
+  -webkit-box-shadow: 0 15px 28px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 15px 28px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 15px 28px -12px rgba(0, 0, 0, 0.75);
+}
