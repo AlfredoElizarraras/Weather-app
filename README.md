@@ -2,7 +2,7 @@
  :sunny: Weather app :partly_sunny:
 </h1>
 
-> This app fetches weather info from an api page. It's purpose is to showcase what I have learned about async and apis code in the Microverse course curriculum.
+> This app fetches weather info from open weather api page. It's purpose is to showcase what I have learned about async and apis code in the Microverse course curriculum.
 
 
 ## Built With
@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-Coming soon.
+- You can found a live demo of the app [here](https://material-weather-app-1e21d.web.app/)
 
 ### Prerequisites
 
@@ -49,12 +49,21 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - [Microverse](https://microverse.org)
-- [Odin project](https://www.theodinproject.com/)v13.14.0
+- [Odin project](https://www.theodinproject.com/)
+- [Weather API](https://openweathermap.org/api)
+- [Celcius and Farenheit icons by: Vitaly Gorbachev](https://www.flaticon.com/authors/vitaly-gorbachev)
+- [Close and Search buttons by: Material icons](https://material.io/resources/icons/?style=baseline)
+- [I take the idea for the web design based on: Material design by Google](https://material.io/)
+- [Loading image from: Icon library](https://icon-library.com/)
+- [Deployed on firebase](https://firebase.google.com/)
 ---
 
 ## Screen shots
 
-Coming soon.
+![home](/assets/images/start_app.png?raw=true "home")
+![celcius](/assets/images/celcius.png?raw=true "celcius")
+![farenheit](/assets/images/farenheit.png?raw=true "farenheit")
+![error](/assets/images/error.png?raw=true "error")
 
 ---
 
