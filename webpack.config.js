@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -69,3 +70,4 @@ module.exports = {
     new CssMinimizerPlugin(),
   ],
 };
+/* eslint-enable import/no-unresolved */
